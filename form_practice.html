@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>表单练习</title>
+</head>
+<body>
+
+  <h1>三、常用输入控件</h1>
+
+  <form>
+
+    <h2>文本类</h2>
+    <p>姓名<input type="text" name="username" placeholder="请输入姓名" required></p>
+    <p>邮箱<input type="email" name="mail"></p>
+    <p>密码<input type="password" name="pwd"></p>
+    <p>年龄<input type="number" name="age" min="16" max="120"></p>
+    <p>生日<input type="date" name="birthday"></p>
+
+    <h2>单选与多选</h2>
+    <p>课程评分</p>
+    <label><input type="radio" name="score" value="好"> 好</label>
+    <label><input type="radio" name="score" value="中"> 中</label>
+    <label><input type="radio" name="score" value="差"> 差</label>
+
+    <p>感兴趣的主题（可多选）</p>
+    <label><input type="checkbox" name="topic" value="html"> HTML</label>
+    <label><input type="checkbox" name="topic" value="css"> CSS</label>
+    <label><input type="checkbox" name="topic" value="js"> JavaScript</label>
+
+    <h2>下拉与文本域</h2>
+    <label for="grade">年级</label>
+    <select id="grade" name="grade">
+      <option value="">请选择</option>
+      <option value="1">大一</option>
+      <option value="2">大二</option>
+    </select>
+
+    <p><label for="advice">你的建议</label></p>
+    <textarea id="advice" name="advice" rows="4" placeholder="至少写一句"></textarea>
+
+    <h2>按钮</h2>
+    <button type="submit">提交</button>
+    <button type="reset">重置</button>
+
+  </form>
+
+</body>
+</html>
