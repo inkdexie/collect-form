@@ -1,0 +1,216 @@
+/* 全局重置与盒模型 */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f7fa;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部 */
+.site-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.site-header h1 { font-size: 28px; margin-bottom: 10px; }
+.slogan { font-size: 14px; opacity: 0.9; }
+
+/* 导航 */
+.site-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #e4e7ed;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.site-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+}
+
+.site-nav a {
+    color: #606266;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
+
+.site-nav a:hover { color: #667eea; }
+
+/* 主内容区 */
+main.container { padding: 30px 20px; }
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+section h2 {
+    font-size: 22px;
+    color: #303133;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #667eea;
+}
+
+.intro-section p { color: #606266; font-size: 15px; }
+
+/* 表单通用 */
+.form-tip { font-size: 14px; color: #909399; margin-bottom: 20px; }
+.required-mark { color: #f56c6c; font-weight: bold; }
+
+.form-group {
+    border: 1px solid #e4e7ed;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group legend {
+    font-size: 16px;
+    font-weight: bold;
+    color: #667eea;
+    padding: 0 10px;
+}
+
+.form-item { margin-bottom: 18px; }
+.form-item label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #606266;
+    font-weight: 500;
+}
+
+/* 输入框统一样式 */
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item input[type="password"],
+.form-item input[type="number"],
+.form-item input[type="date"],
+.form-item select,
+.form-item textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #303133;
+    background-color: #fff;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-item input:focus,
+.form-item select:focus,
+.form-item textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
+}
+
+.form-item input.invalid { border-color: #f56c6c; }
+
+textarea { resize: vertical; min-height: 80px; }
+.char-count { font-size: 12px; color: #909399; text-align: right; margin-top: 4px; }
+.hint { font-size: 12px; color: #909399; margin-top: 4px; }
+.error-msg { font-size: 12px; color: #f56c6c; margin-top: 4px; min-height: 16px; }
+
+/* 单选/多选 */
+.radio-group, .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.radio-label, .checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
+    font-weight: normal !important;
+    cursor: pointer;
+}
+
+.radio-label input, .checkbox-label input {
+    width: auto !important;
+    cursor: pointer;
+}
+
+/* 按钮 */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.btn-submit, .btn-reset {
+    padding: 12px 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+}
+
+.btn-submit {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+}
+
+.btn-reset { background-color: #f0f2f5; color: #606266; }
+.btn-submit:hover, .btn-reset:hover { opacity: 0.9; }
+.btn-submit:active, .btn-reset:active { transform: scale(0.98); }
+
+/* FAQ */
+.faq-item {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f5f7fa;
+    border-radius: 6px;
+}
+
+.faq-item h3 { font-size: 15px; color: #303133; margin-bottom: 8px; }
+.faq-item p { font-size: 14px; color: #606266; }
+
+/* 页脚 */
+.site-footer {
+    background-color: #303133;
+    color: #909399;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+}
+
+.site-footer p { font-size: 13px; }
+
+/* 响应式 */
+@media (max-width: 600px) {
+    .site-header h1 { font-size: 22px; }
+    .site-nav ul { gap: 15px; }
+    section { padding: 15px; }
+    .radio-group, .checkbox-group { flex-direction: column; gap: 10px; }
+    .form-actions { flex-direction: column; }
+    .btn-submit, .btn-reset { width: 100%; }
+}
